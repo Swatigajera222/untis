@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="font/all.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -90,9 +92,9 @@
     <section class="breadcrumbs">
         <div class="container">
             <ul class="breadcrumbs_list">
-                <li>Home /</li>
-                <li>Drawing /</li>
-                <li>Angelina new style /</li>
+                <li>Home </li>
+                <li>Drawing </li>
+                <li>Angelina new style </li>
             </ul>
         </div>
     </section>
@@ -103,7 +105,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="slider_img">
+                    <div class=" slider_img owl-carousel">
+                        <img src="img/banner.png" alt="banner-bg" class="img-fluid" />
+                        <img src="img/banner.png" alt="banner-bg" class="img-fluid" />
                         <img src="img/banner.png" alt="banner-bg" class="img-fluid" />
                     </div>
                 </div>
@@ -231,6 +235,8 @@
     <script src="font/all.js"></script>
     <script src="js/faq.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+
     <script>
         new WOW().init();
     </script>
@@ -240,6 +246,24 @@
             $(".item").matchHeight();
         });
     </script>
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1200: {
+                        items: 1
+                    }
+                }
+            })
+    
+        </script>
 </body>
 
 </html>

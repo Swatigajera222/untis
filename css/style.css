@@ -1,0 +1,386 @@
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(..//font/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url(..//font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-Light;
+  src: url(..//font/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: Helvetica-normal;
+  src: url(..//font/Helvetica.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: ease-in-out 0.3s;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat-Regular;
+  color: #111111;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* ================== Header ==================*/
+.header-main .header_inner {
+  display: flex;
+  height: 110px;
+  align-items: center;
+}
+.header-main .header_inner .menu_header {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+}
+.header_inner .menu_header .nav_list {
+  display: flex;
+  margin-bottom: 0px;
+}
+.header_inner .menu_header .nav_list .drop_menu {
+  list-style: none;
+  margin-left: 20px;
+  position: relative;
+  transition: transform 0.5s ease 0s;
+}
+
+.header_inner .menu_header .nav_list .drop_menu::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #000000;
+  transform-origin: right bottom;
+  transform: scaleX(0);
+  transition: transform 0.5s ease 0s;
+}
+.header_inner .menu_header .nav_list .drop_menu:hover::before {
+  transform-origin: left bottom;
+  transform: scaleX(1);
+  background: #000000;
+}
+.header_inner .menu_header .nav_list .drop_menu a {
+  color: #121212;
+  font-family: Montserrat-Medium;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.header_inner .menu_header .nav_list .drop_menu .sm_menu {
+  display: none;
+  position: absolute;
+  z-index: 9;
+  top: 100%;
+  margin-top: 26px;
+  left: 0;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  background: #ffffff;
+  box-shadow: 0 6px 10px #b5b9bd24;
+  min-width: 222px;
+}
+
+.header_inner .menu_header .nav_list .drop_menu:hover .sm_menu {
+  display: block;
+}
+.header_inner .menu_header .nav_list .drop_menu:hover img {
+  transform: rotate(180deg);
+}
+.drop_menu .sm_menu .level_2__menu {
+  padding: 0px;
+}
+.drop_menu .sm_menu .level_2__menu .level_2__item a {
+  padding: 6px 15px 6px 25px;
+  font-weight: 400;
+  color: #000;
+  display: block;
+  font-size: 14px;
+  line-height: 1.8129;
+  display: flex;
+  justify-content: space-between;
+}
+.level_2__item .level_3 {
+  display: none;
+  position: absolute;
+  z-index: 9;
+  top: 100%;
+  margin-top: -60px;
+  left: 220px;
+  padding-top: 0;
+  padding-bottom: 25px;
+  background: #ffffff;
+  box-shadow: 0 6px 10px #b5b9bd24;
+  min-width: 222px;
+  padding-left: 0px;
+}
+.drop_menu .sm_menu .level_2__menu .level_2__item:hover .level_3 {
+  display: block;
+}
+ul.nav li.dropdown:hover ul.dropdown-menu {
+  display: block;
+}
+.menu_header .nav_list :hover .mega_menu {
+  display: block;
+}
+/* ================== END Header================== */
+/* ================== breadcrumbs ================== */
+.breadcrumbs {
+  background-color: #f2f3f5;
+  padding: 4px 0;
+  position: relative;
+}
+.breadcrumbs .breadcrumbs_list {
+  display: flex;
+  margin-bottom: 0px;
+}
+.breadcrumbs .breadcrumbs_list li {
+  color: #797b7e;
+  font-size: 12px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  padding-right: 9px;
+  margin-right: 7px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+/*============== END  breadcrumbs =============*/
+
+/* ================== main_content ============*/
+.main_content {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+.main_content .slider_img img {
+  width: 100%;
+}
+.main_content .right_content {
+  padding-left: 40px;
+}
+
+.right_content .right_content_inner .stock_btn span {
+  background-color: #44bb9e;
+  color: #fff;
+  padding: 3px;
+  min-width: 56px;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.right_content .right_content_inner h2 {
+  font-size: 32px;
+  color: #000;
+  margin-top: 24px;
+  letter-spacing: -0.01em;
+  font-family: Montserrat-Light;
+}
+.right_content .right_content_inner .single_product__price p {
+  align-items: baseline;
+  font-size: 22px;
+  margin-top: 2rem;
+}
+.right_content .right_content_inner .single_product__short p {
+  margin-top: 2rem;
+  margin: 33px 0;
+  font-size: 14px;
+  line-height: 16px;
+}
+.right_content .right_content_inner .add_to_card button {
+  width: 100%;
+  margin-top: 2.143rem;
+  padding: 1.375rem 1.5rem;
+  background: #000000;
+  border: 1px solid #000000;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 0.813rem;
+  line-height: 1.125;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0;
+  box-shadow: none;
+}
+.right_content .right_content_inner .add_to_card button img {
+  margin-right: 9px;
+}
+
+/* =====================accordion============= */
+.accordion {
+  margin-top: 30px;
+  border-top: solid 1px #e1e2e4;
+}
+.accordion_ton {
+  border-bottom: 1px solid #0000001c;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: start;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #000000;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button .accordion-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.375;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 14px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: #bdbdbd;
+  transform: rotate(21deg);
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 14px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: #bdbdbd;
+  transform: rotate(55deg);
+}
+.accordion button[aria-expanded="true"] .icon::before {
+  top: 17px;
+  left: -4px;
+  width: 10px;
+  height: 2px;
+  background: #bdbdbd;
+  transform: rotate(43deg);
+}
+.accordion button[aria-expanded="true"] .icon::after {
+  top: 13px;
+  left: 6px;
+  width: 2px;
+  height: 10px;
+  background: #bdbdbd;
+  transform: rotate(217deg);
+}
+.accordion button[aria-expanded="true"] + .accordion-content {
+  opacity: 1;
+  max-height: fit-content;
+  transition: all 500ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 500ms linear, max-height 500ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content h3 {
+  margin-top: 0;
+  padding-top: 15px;
+  margin-bottom: 25px;
+  font-size: 44px;
+  line-height: 1.05;
+  font-family: Montserrat-Light;
+  width: 70%;
+}
+.accordion .accordion-content p {
+  color: #000000;
+  margin-top: 0;
+  padding-top: 15px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.last-content p {
+  margin-bottom: 0px !important;
+}
+td {
+  font-size: 14px;
+  line-height: 16px;
+}
+/* ================== END accordion============= */
+
+/* ================== END main_content ============*/
+
+@media only screen and (max-width: 768px) {
+  .header_inner {
+    flex-direction: column;
+  }
+  .header-main .header_inner .menu_header {
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .header_inner .menu_header .nav_list .drop_menu {
+    margin-left: 10px;
+    width: 55px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .header_inner .menu_header .nav_list {
+    padding-left: 0px;
+  }
+  .right_content {
+    padding: 0px;
+    margin-top: 20px;
+    padding-left: 0px !important;
+  }
+  .header_inner .menu_header .nav_list .drop_menu a {
+    padding: 3px;
+    font-size: 11px;
+    align-items: center;
+    width: 80px;
+  }
+  .main_content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
